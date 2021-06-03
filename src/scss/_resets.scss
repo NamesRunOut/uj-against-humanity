@@ -6,6 +6,11 @@
   font-family: bahnschrift;
 }
 
+html, body {
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
 button {
   font-size: 1.2rem;
   border: none;
