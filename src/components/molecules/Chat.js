@@ -12,7 +12,7 @@ const Chat = ({chat, writeMessage}) => {
             </motion.div>
             <motion.div className="info_chat_input">
                 <input id="chatInput" placeholder="Chat" aria-label="Chat"/>
-                <button type="button" onClick={writeMessage}>Send</button>
+                <button type="button" onClick={writeMessage}>Wyślij</button>
             </motion.div>
         </>
     );

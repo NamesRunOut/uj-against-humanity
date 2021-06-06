@@ -5,7 +5,7 @@ const BlackCard = () => {
     const socket = useContext(SocketContext)
     const [black, setBlack] = useState({
         id: 0,
-        text: 'Questions will appear here, answer with one (or more) of your cards',
+        text: 'Pytania będą pojawiać się tutaj, odpowiadaj na nie jedną białą kartą',
     })
 
     useEffect(() => {

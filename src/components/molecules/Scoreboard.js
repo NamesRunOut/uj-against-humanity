@@ -12,7 +12,7 @@ const Scoreboard = ({players}) => {
                         <motion.div className="playerScore">
                             <motion.div>
                                 {player.name} {player.status}<br/>
-                                Points: {player.points}
+                                Punkty: {player.points}
                                 <motion.span style={{opacity: '0.2', marginLeft: '0.25em'}}>
                                     [{player.id}]
                                 </motion.span>

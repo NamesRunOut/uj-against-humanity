@@ -72,7 +72,7 @@ const PlayerCards = (props) => {
         })
 
         socket.on('tzarTurn', function () {
-            setMessage('You are the tzar, pick a card')
+            setMessage('Jesteś tzarem, wybierz kartę')
             setCommit({
                 canCommit: false,
                 commitCount: commit.commitCount
@@ -80,7 +80,7 @@ const PlayerCards = (props) => {
         })
 
         socket.on('playerWait', function () {
-            setMessage('Tzar is picking a card')
+            setMessage('Tzar wybiera zwycięzcę')
             setCommit({
                 canCommit: false,
                 commitCount: commit.commitCount
@@ -88,7 +88,7 @@ const PlayerCards = (props) => {
         })
 
         socket.on('blockTzar', function (tzarid) {
-            setMessage('You are the tzar')
+            setMessage('Jesteś tzarem')
             setCommit({
                 canCommit: false,
                 commitCount: commit.commitCount

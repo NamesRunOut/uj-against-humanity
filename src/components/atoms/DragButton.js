@@ -6,8 +6,8 @@ const DragButton = () => {
 
     return (
         <div className="navbar_decks">
-            <button onClick={() => setCanDrag((canDrag) => !canDrag)}>Drag
-                cards {canDrag ? 'ON' : 'OFF'}</button>
+            <button onClick={() => setCanDrag((canDrag) => !canDrag)}>
+                Przeciąganie kart {canDrag ? 'WL' : 'WYL'}</button>
         </div>
     );
 }

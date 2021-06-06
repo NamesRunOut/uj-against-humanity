@@ -12,7 +12,7 @@ const Points = ({response}) => {
 
     return (
         <div className="navbar_points">
-            Score limit:
+            Limit punktów:
             <select id="pointsInput" defaultValue='5'>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -26,7 +26,7 @@ const Points = ({response}) => {
                 <option value="10">10</option>
             </select>
             <div>
-                <button type="button" id="pointsButton" onClick={setPoints} disabled={response}>Select</button>
+                <button type="button" id="pointsButton" onClick={setPoints} disabled={response}>Wybierz</button>
             </div>
         </div>
     );

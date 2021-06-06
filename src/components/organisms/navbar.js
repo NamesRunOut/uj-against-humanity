@@ -42,7 +42,6 @@ const Navbar = () => {
         document.addEventListener('keydown', logKey)
 
         socket.on('message', function (message) {
-            //displayMessage(message);
             setChat(chat => [...chat, message])
             updateScroll();
         })
@@ -53,11 +52,6 @@ const Navbar = () => {
                 sauce: "[" + card.matchid + "] " + cardSauce.text
             }])
             updateScroll();
-            /*displayMessage({
-                date: '',
-                author: "white card",
-                sauce: "[" + card.matchid + "] " + cardSauce.text
-            });*/
         })
 
         socket.on('sessionid', function (id) {
@@ -68,10 +62,10 @@ const Navbar = () => {
             for (let id in playerList) {
                 let p = players[playerList[id]]
                 let name = p.name
-                if (p.id === sessionid) name += " (you)"
+                if (p.id === sessionid) name += " (ty)"
                 let status = ""
                 if (p.tzar) status = "tzar"
-                else if (!p.played) status = "playing..."
+                else if (!p.played) status = "zagrywanie..."
                 tmp.push({
                     name: name,
                     status: status,
@@ -99,7 +93,7 @@ const Navbar = () => {
                 {showinfo &&
                 <Info close={() => setShowinfo(false)} players={players} chat={chat} writeMessage={writeMessage}/>}
             </AnimateSharedLayout>
-            <button onClick={() => setShowinfo(showinfo => !showinfo)}>Open info</button>
+            <button onClick={() => setShowinfo(showinfo => !showinfo)}>Otwórz menu</button>
         </div>
     );
 }

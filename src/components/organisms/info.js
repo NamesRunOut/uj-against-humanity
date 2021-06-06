@@ -20,7 +20,7 @@ const Info = ({close, players, chat, writeMessage}) => {
                 layout>
                 <Actions/>
                 <motion.div className="info_score">
-                    <motion.div className="title">Scoreboard
+                    <motion.div className="title">Tabela wyników
                         <hr/>
                     </motion.div>
                     <Scoreboard players={players}/>
@@ -29,7 +29,7 @@ const Info = ({close, players, chat, writeMessage}) => {
                     <Chat chat={chat} writeMessage={writeMessage}/>
                 </motion.div>
                 <motion.button onClick={() => close()}>
-                    Close
+                    Zamknij
                 </motion.button>
             </motion.div>
         </AnimatePresence>

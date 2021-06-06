@@ -21,8 +21,8 @@ const Actions = () => {
 
     return (
         <>
-            <button type="button" onClick={reroll}>Reroll cards</button>
-            <button type="button" onClick={skip} id="skipButton">Skip black</button>
+            <button type="button" onClick={reroll}>Wylosuj ponownie karty</button>
+            <button type="button" onClick={skip} id="skipButton">Pomiń aktualną czarną kartę</button>
         </>
     );
 }

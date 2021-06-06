@@ -15,7 +15,7 @@ const Homepage = () => {
 
     window.onload = function () {
         socket.emit('new player');
-        nickname = prompt("Please enter your nickname", "") || "unknown";
+        nickname = prompt("Podaj nick", "") || "unknown";
         socket.emit('updateName', nickname);
     };
 
@@ -28,7 +28,7 @@ const Homepage = () => {
                 + String(date.getMinutes()).padStart(2, "0") + ":"
                 + String(date.getSeconds()).padStart(2, "0") + "]",
             author: nickname,
-            sauce: "leaves the game"
+            sauce: "opuszcza grę"
         }
         socket.emit('message', input);
         socket.emit('leaverTrigger');
