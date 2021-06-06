@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# UJ Against Humanity
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Założenia projektu
 
-## Available Scripts
+Stworzenie gry „Cards Against Humanity” zmodyfikowanej o zawartość kart białych i czarnych tak, aby były one związane ze studiowaniem na UJ.
 
-In the project directory, you can run:
+## Zasady gry
 
-### `npm start`
+Podczas każdej rundy gracz zwany tzar’em zadaje pytanie na czarnej karcie. Pozostali gracze odpowiadają białą kartą, którą uznają za najlepiej odpowiadającą na pytanie. Na koniec tzar wybiera jego zdaniem najlepszą kartę. Gracz, który wybrał zwycięską kartę, zdobywa jeden punkt oraz zostaje tzar’em na czas następnej rundy. Gra kończy się gdy któryś z graczy zdobędzie maksymalną ilość punktów.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Wymagania
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+W grze możemy wyróżnić 3 rodzaje aktorów: użytkownicy, gracze oraz tzar. Użytkownik jest aktorem abstrakcyjnym, a gracz i tzar są jego implementacjami. Możliwości użytkownika to: wybór swojej nazwy, napisanie wiadomości na czacie, wyświetlanie tablicy wyników, edytowanie opcji przeciągania kart, ustawianie limitu punktów. Uprawnienia gracza to: odpowiadanie na pytania, możliwość wylosowania ponownie białych kart oraz pominięcie czarnej karty. Zadaniem tzar'a jest wybór najlepszej odpowiedzi.
 
-### `npm test`
+## Opis
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Funkcjonalności niezależne od pełnionej roli w grze:
 
-### `npm run build`
+* Użytkownik może:
+    * wybrać swój nick
+    * napisać wiadomość na czacie
+    * wyświetlić tablicę wyników
+    * wyłączyć lub włączyć przeciąganie kart
+    * ustalić limit punktów
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Funkcjonalności zależne od pełnionej roli w grze:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Gracz:
+    * odpowiada na pytania zapisane na czarnej karcie przez wybór białej karty
+    * może raz na grę wylosować ponownie białe karty
+    * może pominąć czarną kartę
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Tzar:
+    * wybiera najlepszą odpowiedź spośród kart wybranych przez zwykłych graczy
+    * po wybraniu najlepszej odpowiedzi oddaje funkcję tzara graczowi, który wybrał zwycięską kartę
